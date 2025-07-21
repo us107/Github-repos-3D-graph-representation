@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GitHub Repos Graph</title>
+    <style>
+      body { margin: 0; }
+      #graph { width: 100vw; height: 100vh; }
+    </style>
+    <script src="https://unpkg.com/3d-force-graph"></script>
+  </head>
+  <body>
+    <div id="graph"></div>
+    <script>
+      // Load JSON graph
+      fetch('graph.json')
+        .then(res => res.json())
+        .then(data => {
+          const Graph = ForceGraph3D()(document.getElementById('graph'))
+            .graphData(data)
+            .nodeLabel(node => `${node.label}\nLang: ${node.language}\nTopics: ${node.topics.join(", ")}`)
+            .nodeAutoColorBy('language')  // 🎨 Color nodes by language
+            .nodeVal(node => node.size / 50) // 📏 Size by README length
+            .linkOpacity(0.3)
+            .linkWidth(link => link.value); // 🔗 Edge thickness = weight
+        });
+    </script>
+  </body>
+</html>
