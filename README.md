@@ -36,6 +36,10 @@ Github-repos-3D-graph-representation/
 └── README.md
 ```
 
+## Graph visualization
+
+[📽️ Watch demo video](video.mp4)
+
 ---
 
 ## Setup Instructions
