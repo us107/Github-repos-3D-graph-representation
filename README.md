@@ -103,22 +103,11 @@ Then visit: `http://localhost:5500/index.html`
 
 ---
 
-## Future Enhancements
-
-- [ ] Tooltips with README summaries
-- [ ] Filter by language or topic
-- [ ] Timeline slider for project evolution
-- [ ] Export as `.gexf` for Gephi or Neo4j integration
-
----
 
 ## Author
 
 **Trisha Sharma**  
-Data Science and Engineering | Personal GitHub Visualization Tool
-
+Data Science and Engineering Graduate
 ---
 
-## License
 
-MIT License
